@@ -1,5 +1,5 @@
 import requests
-from .config import COTACAO_PERIODO, COTACOE_DIA
+from .config import COTACAO_PERIODO, COTACAO_DIA
 
 def obtener_cotacoes(inicio, final):
     """
@@ -25,7 +25,7 @@ def obtener_cotacao(data):
             "@dataCotacao":f"'{data}'",
             "$format":"json"
             }
-    res =  requests.get(COTACOE_DIA,params=payload)
+    res =  requests.get(COTACAO_DIA,params=payload)
     return res.json()
 
 
